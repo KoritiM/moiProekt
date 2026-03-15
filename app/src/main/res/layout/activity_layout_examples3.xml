@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Примеры разметки экрана"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="30dp" />
+
+        <!-- ===== 1. LinearLayout ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. LinearLayout"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp" />
+
+        <!-- Простой LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#E0E0E0"
+            android:padding="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кнопка 1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кнопка 2" />
+        </LinearLayout>
+
+        <!-- LinearLayout с весом -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Вес 1"
+                android:background="#2196F3"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#4CAF50"
+                android:text="Вес 2"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- LinearLayout с layout_gravity -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#D3D3D3"
+            android:padding="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="тут" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="и тут" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="там" />
+        </LinearLayout>
+
+        <!-- ===== 2. RelativeLayout ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:text="2. RelativeLayout"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="#E0E0E0"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/btnCenter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="В центре"
+                android:background="#2196F3"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/btnCenter"
+                android:layout_centerVertical="true"
+                android:text="Слева"
+                android:background="#9C27B0"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/btnCenter"
+                android:layout_centerVertical="true"
+                android:text="Справа"
+                android:background="#E91E63"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <!-- ===== 3. TableLayout ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:text="3. TableLayout"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F5F5F5"
+            android:padding="20dp">
+
+            <!-- Строка 1 -->
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp"
+                    android:text="1 часть" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    android:padding="10dp"
+                    android:text="2 часть" />
+            </TableRow>
+
+            <!-- Строка 2 с объединением ячеек -->
+            <TableRow>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:text="сразу 2 части" />
+            </TableRow>
+        </TableLayout>
+
+        <!-- ===== 4. FrameLayout ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:text="4. FrameLayout"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#E0E0E0">
+
+            <!-- Красный квадрат -->
+            <View
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:background="#FF0000" />
+
+            <!-- Синий квадрат -->
+            <View
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="#0000FF" />
+
+            <!-- Кнопка в углу -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:text="Кнопка" />
+        </FrameLayout>
+
+        <!-- ===== 5. GridLayout ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:text="5. GridLayout"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="3"
+            android:columnCount="3"
+            android:background="#F0F0F0"
+            android:padding="20dp">
+
+            <!-- Кнопка 1 -->
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_margin="5dp"
+                android:text="Кн 1" />
+
+            <!-- Кнопка 2 -->
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_margin="5dp"
+                android:text="Кн 2" />
+
+            <!-- Кнопка 3 -->
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_margin="5dp"
+                android:text="Кн 3" />
+
+            <!-- Кнопка 4 -->
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_margin="5dp"
+                android:text="Кн 4" />
+
+            <!-- Кнопка 5 -->
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_margin="5dp"
+                android:text="Кн 5" />
+
+            <!-- Кнопка, объединяющая 2 колонки -->
+        </GridLayout>
+
+        <!-- ===== 6. Вложенные layout ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:text="6. Вложенные layout"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Внешний layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FF9800"
+            android:padding="30dp">
+
+            <!-- Внутренний layout (как include) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF"
+                android:padding="20dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Кнопка внутри include" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== 7. Gravity ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="10dp"
+            android:text="7. Gravity"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#F5F5F5"
+            android:padding="20dp">
+
+            <!-- Текст слева -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                android:gravity="left"
+                android:padding="20dp"
+                android:text="слева" />
+
+            <!-- Текст по центру -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:padding="20dp"
+                android:text="по центру" />
+
+            <!-- Текст справа -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#FFFFFF"
+                android:gravity="right"
+                android:padding="20dp"
+                android:text="справа" />
+
+            <!-- Текст внизу -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="Текст внизу"
+                android:gravity="bottom|center_horizontal"
+                android:background="#FFFFFF"
+                android:padding="20dp" />
+        </LinearLayout>
+
+        <!-- Финальный текст -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="50dp"
+            android:text="Все примеры сделаны"
+            android:textColor="#4CAF50"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>
